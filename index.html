@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bloco.css">
+    <link rel="stylesheet" href="css/lixeira.css">
+    <link rel="stylesheet" href="css/botaoAdiciona.css">
+    <link rel="stylesheet" href="css/ordenar.css">
+    <link rel="stylesheet" href="css/cancelar.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/inputImagem.css">
+    <link rel="stylesheet" href="css/carregamento.css">
+    <link rel="stylesheet" href="css/inputFile.css">
+    <title>Desktop Application</title>
+</head>
+
+<body>
+    <nav class="navbar is-transparent is-flex is-justify-content-space-between">
+        <img src="./img/mTech.jpeg" alt="Logo da M" class="logoM">
+        <div class="navbar-item">
+            <div class="field is-grouped">
+                <button class="js-modal-trigger button is-primary alterarAdm" data-target="modal-js-example">
+                    Administrador
+                </button>
+                <button class="button is-primary botaoSaida is-invisible">
+                    Sair
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="principal is-invisible">
+        <div class="principal-acoes is-flex is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+            
+            <label for="url" class="title is-4">Arquivos</label>
+            <input type="url" id="link" class="number mb-1 arquivosFile caminho"  method="post" enctype="multipart/form-data">
+
+            <input type='file' accept='file/*' id="selecao" class="arquivosFile arquivando ml-6 pl-6">
+
+            <div id="frame" class="frame" style="display: none">
+                <br>
+                <iframe id="frame" style="width: 100%; height: 650px" frameBorder=0;></iframe>
+            </div>
+
+            <label for="name" class="title is-4 mt-1">Nome</label>
+            <input type="name" id="nome" class="number mb-1">
+
+            <input type="file" name="picture__input" id="picture__input" accept="image/*">
+            <label class="picture mb-5" for="picture__input" tabIndex="0">
+                <span class="picture__image"></span>
+            </label>
+        </div>
+
+        <div class="is-flex is-justify-content-center ml-6">
+            <button id="download" class="adicionaImg" alt="adicionar"></button>
+            <button class="bola" alt="excluir"></button>
+            <button id="ordem" class="ordenar" alt="Ordenar"></button>
+            <button class="cancelar is-invisible" alt="Cancelar"></button>
+        </div>
+        <div class="notification is-danger is-light is-invisible">
+            <button class="delete"></button>
+            <strong>Erro: Adicione um arquivo .zip ou .exe e uma imagem</strong>
+        </div>
+    </div>
+    <div class="pre-carregamento">
+        <div class="efeito-carregamento"></div>
+    </div>
+    <div class="adicionar">
+
+    </div>
+    <div id="modal-js-example" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box is-flex is-justify-content-center is-align-content-center">
+                <div id="login-box">
+                    <div id="login-header" class="title is-3">
+                        Apenas administradores
+                    </div>
+                    <div id="login-inputs">
+                        <input type="text" placeholder="Nome de usuário" name="usuario" class="number">
+                        <br />
+                        <input type="password" placeholder="Senha" name="senha" class="number">
+                    </div>
+                    <div id="enviar">
+                        <input type="button" class="button is-primary botaoLogin" value="Login">
+                        <a href="#">Esqueceu a sua senha?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <script src="./action/deleteNotification.js"></script>
+    <script src="./action/carregamento.js"></script>
+    <script type="module" src="./action/inputFile.js"></script>
+    <script type="module" src="./action/modal.js"></script>
+    <script type="module" src="./action/inputImage.js"></script>
+    <script type="module" src="./action/validador.js"></script>
+    <script type="module" src="./action/acoes.js"></script>
+</body>
+
+</html>

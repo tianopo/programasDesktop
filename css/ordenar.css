@@ -1,0 +1,22 @@
+.ordenar{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border-radius: 40px;
+    background-color: rgb(228, 223, 223);
+    box-shadow: 0px 0px 5px black;
+    background-image: url('../img/ordenar.png');
+    background-size: calc(100% - 10px);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.info::before{
+    background: rgb(224, 95, 95);
+    padding:15px; 
+    position:relative; 
+    top:20px; 
+    left:120px; 
+    width:30%; 
+    float:left; 
+}

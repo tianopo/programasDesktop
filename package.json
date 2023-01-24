@@ -1,0 +1,46 @@
+{
+  "name": "desktop_disp_arquivos",
+  "version": "1.0.1",
+  "description": "Aplicativo para distribuição feito pro Matheus",
+  "author": "tianopo <matheuslink18@hotmail.com>",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "iniciar": "electron .",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonyzach/usfm-validator.git"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "build": {
+    "appId": "com.tianopo.baixarexe",
+    "productName": "BaixarExe",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^22.0.2",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "update-electron-app": "^2.0.1"
+  }
+}
