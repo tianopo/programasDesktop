@@ -105,3 +105,6 @@ Agora você estará logado como administrador e poderá adicionar, remover, orde
 * Incrementado um sistema de segurança também caso queira usar o código para suas aplicações e o usuário não é o administrador.
 
 ![Segurança](https://user-images.githubusercontent.com/92820414/214529995-27ac5be3-7b9a-4c58-866f-e74ce377f97f.gif)
+
+## ▶️ Video
+[AplicaçãoDesktop](https://www.loom.com/share/76a9c2c422d44062a27ee046f897772d)
